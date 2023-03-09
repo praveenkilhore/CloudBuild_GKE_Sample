@@ -7,14 +7,14 @@ steps:
     args: [
             "build", 
             "-t", 
-            "us-central1-docker.pkg.dev/practice-379412/practice/helloworld",
+            "us-central1-docker.pkg.dev/practice-379412/practice/demo",
             "."]
 
   - name: gcr.io/cloud-builders/docker
     args: [
             "push", 
             "-t", 
-            "us-central1-docker.pkg.dev/practice-379412/practice/helloworld", 
+            "us-central1-docker.pkg.dev/practice-379412/practice/demo", 
             "."]
 
-images: ["us-central1-docker.pkg.dev/practice-379412/practice/helloworld"]
+images: ["us-central1-docker.pkg.dev/practice-379412/practice/demo"]
