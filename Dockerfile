@@ -1,4 +1,4 @@
-FROM openjdk:17
-COPY ./CloudBuild_GKE_Sample/src\src\main\java\com\example\helloworld\HelloworldApplication.java /tmp
-WORKDIR /tmp
-ENTRYPOINT ["java","HelloWorldApplication"]
+FROM openjdk:8-jre
+ADD helloworld.jar helloworld.jar
+EXPOSE 8010
+ENTRYPOINT ["java", "-jar", "helloworld.jar"]
