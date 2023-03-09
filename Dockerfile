@@ -1,4 +1,3 @@
 FROM openjdk:19-jdk-alpine
-ARG JAR_FILE=JAR_FILE_MUST_BE_SPECIFIED_AS_BUILD_ARG
-COPY ${JAR_FILE} app.jar
+COPY hello-spring-1.0.0.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
