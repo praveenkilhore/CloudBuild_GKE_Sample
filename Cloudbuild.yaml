@@ -4,5 +4,17 @@ steps:
     args: ["test"]
     
   - name: gcr.io/cloud-builders/docker
-    args: ["build", "-t", "us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/helloworld", "--build-arg=JAR_FILE=target/hello-world.jar", "."]
+    args: [
+            "build", 
+            "-t", 
+            "us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/helloworld",
+            "."]
+
+  - name: gcr.io/cloud-builders/docker
+    args: [
+            "push", 
+            "-t", 
+            "us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/helloworld", 
+            "."]
+
 images: ["us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/helloworld"]

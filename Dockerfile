@@ -1,4 +1,4 @@
 FROM openjdk:8-jre
-ADD target/HelloworldApplication.jar HelloworldApplication.jar
+ADD target/helloworld.jar helloworld.jar
 EXPOSE 8010
-ENTRYPOINT ["java","-jar","HelloworldApplication.jar"]
+ENTRYPOINT ["java", "-jar", "helloworld.jar"]
