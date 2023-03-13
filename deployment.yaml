@@ -2,17 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: practice_app
-labels:
-  app: practice_app
+  labels:
+    app: practice_app
 spec:
   replicas: 1
   selector:
-  matchLabels:
-    app: practice_app
-  template:
-    labels:
+    matchLabels:
       app: practice_app
-  spec:
-  containers:
-  - name: practice_app 
-    image: us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1
+  template:
+    metadata:
+      labels:
+        app: practice_app
+    spec:
+      containers:
+      - name: practice_app 
+        image: us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1
+        ports:
+        - containerPort: 80
