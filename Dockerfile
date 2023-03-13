@@ -9,21 +9,10 @@
 
 FROM maven:3.8.5-openjdk-17 AS MAVEN_BUILD
 
-COPY pom.xml /build/
-COPY src /build/src/
-
-WORKDIR /build/
-RUN mvn package
-
-FROM openjdk:17-jdk-alpine
-RUN apk --no-cache update \
-    && apk --no-cache upgrade \
-        busybox \
-        libretls \
-        zlib \
-        apk-tools \
-    && rm -rf /var/cache/apk/* 
+COPY pom.xml /app/
+COPY src /app/src/
 
 WORKDIR /app
+RUN mvn package
 
 COPY --from=MAVEN_BUILD /build/target/helloworld-0.0.1-SNAPSHOT.jar /app/
