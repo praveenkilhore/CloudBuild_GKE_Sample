@@ -21,6 +21,6 @@ steps:
     args:
     - run
     - --filename=deployment.yaml
-    - --image=us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1
+    - --image=us-central1-docker.pkg.dev/practice-379412/practice/helloworld
     - --location=us-central1
     - --cluster=cluster1

@@ -16,6 +16,6 @@ spec:
   spec:
   containers:
   - name: practice_app 
-    image: gcr.io/practice-379412/helloworld:v1
+    image: us-central1-docker.pkg.dev/practice-379412/practice/helloworld
     ports:
   - containers: 80
