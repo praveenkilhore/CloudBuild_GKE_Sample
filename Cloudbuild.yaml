@@ -20,7 +20,7 @@ steps:
   - name: gcr.io/cloud-builders/gke-deploy
     args:
     - run
-    - --filename = deployment.yaml
+    - --filename=deployment.yaml
     - --image=gcr.io/practice-379412/helloworld:v1
     - --location=us-central1
     - --cluster=cluster1
