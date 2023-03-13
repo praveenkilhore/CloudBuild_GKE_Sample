@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: practice_app
+labels:
+  app: practice_app
+spec:
+  replicas: 1
+  selector:
+  matchLabels:
+    app: practice_app
+  template:
+    metadata:
+    labels:
+      app: practice_app
+  spec:
+  containers:
+  - name: practice_app 
+    image: gcr.io/practice-379412/helloworld:v1
+    ports:
+  - containers: 80
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: practice_app
+# spec:
+#   selector:
+#     run: practice_app
+#   type: LoadBalancer
+#   ports:
+#     port: 8080

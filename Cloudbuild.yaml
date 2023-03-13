@@ -16,3 +16,11 @@ steps:
             "us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1"]
 
 images: ["us-central1-docker.pkg.dev/practice-379412/practice/helloworld"]
+
+  - name: gcr.io.cloud-builders/gke-deploy
+    args:
+    - run
+    - --filename = deployment.yaml
+    - --image=gcr.io/practice-379412/helloworld:v1
+    - --location=us-central1
+    - --cluster=cluster1
