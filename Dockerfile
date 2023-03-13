@@ -13,7 +13,7 @@ COPY pom.xml /app/
 COPY src /app/src/
 
 WORKDIR /app
-RUN mvn package
+#RUN mvn package
 
 COPY /target/helloworld-0.0.1-SNAPSHOT.jar /app/
 
