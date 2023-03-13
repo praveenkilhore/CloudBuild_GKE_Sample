@@ -13,7 +13,6 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args: [
             "push",
-            "us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1", 
-            "."]
+            "us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1"]
 
 images: ["us-central1-docker.pkg.dev/practice-379412/practice/helloworld"]
