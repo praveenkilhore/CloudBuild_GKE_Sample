@@ -22,5 +22,5 @@ steps:
     - run
     - --filename=deployment.yaml
     - --image=us-central1-docker.pkg.dev/practice-379412/practice/helloworld:v1
-    - --location=us-central1
+    - --location=us-central1-c
     - --cluster=cluster1
