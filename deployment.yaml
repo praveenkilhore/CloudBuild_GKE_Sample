@@ -10,7 +10,6 @@ spec:
   matchLabels:
     app: practice_app
   template:
-    metadata:
     labels:
       app: practice_app
   spec:
