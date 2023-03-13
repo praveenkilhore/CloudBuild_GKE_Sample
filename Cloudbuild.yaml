@@ -17,7 +17,7 @@ steps:
 
 # images: ["us-central1-docker.pkg.dev/practice-379412/practice/helloworld"]
 
-  - name: gcr.io.cloud-builders/gke-deploy
+  - name: gcr.io/cloud-builders/gke-deploy
     args:
     - run
     - --filename = deployment.yaml
